@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./Root";
 import { Provider } from "jotai";
 import "./index.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./Router";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
   <Provider>
-    <App />
+    <RouterProvider router={router} />
   </Provider>
   // </React.StrictMode>
 );
